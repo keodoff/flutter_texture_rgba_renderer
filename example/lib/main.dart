@@ -171,16 +171,7 @@ class _MyAppState extends State<MyApp> {
             Expanded(
               child: textureId == -1
                   ? const Offstage()
-                  : Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                          alignment: Alignment.center,
-                          decoration: const BoxDecoration(color: Colors.blue),
-                          // decoration: const BoxDecoration(color: Colors.black),
-                          // width: width.toDouble(),
-                          // height: height.toDouble(),
-                          child: Texture(textureId: textureId)),
-                    ),
+                  : Texture(textureId: textureId),
             ),
             Text(
                 "texture id: $textureId, texture memory address: ${texturePtr.toRadixString(16)}"),
